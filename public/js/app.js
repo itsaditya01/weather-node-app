@@ -7,7 +7,7 @@ const result = document.querySelector("#result");
 inputForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  fetch("http://localhost:3000/weather?address=" + input.value)
+  fetch("/weather?address=" + input.value)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
